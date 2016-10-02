@@ -1,0 +1,3 @@
+libcomplex is the complex math portion from musl's libm. musl is a complete libc whose license is included with this project.
+
+libcomplex is provided as an easy way to build complex math for systems which do not provide it. For example, developers targeting Android native are not provided with complex math functionality for early API versions. This library can be easily built and linked to for that purpose.
