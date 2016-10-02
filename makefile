@@ -1,3 +1,7 @@
+SYSROOT ?= /usr
+CFLAGS += -I./include -I$(SYSROOT)/include -Wall -Wextra
+LDFLAGS += -lm
+
 SRCS=$(wildcard *.c)
 
 OBJS=$(SRCS:.c=.o)
