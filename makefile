@@ -1,10 +1,3 @@
-SYSROOT=$(NDK)/build/tools/$(toolchain)-$(api)/sysroot/usr
-CC=$(toolchain)-gcc
-AR=$(toolchain)-ar
-RANLIB=$(toolchain)-ranlib
-CFLAGS=--prefix=$(SYSROOT) -I./include -I$(SYSROOT)/include -Wall -Wextra
-LDFLAGS=-fpie -lm
-
 SRCS=$(wildcard *.c)
 
 OBJS=$(SRCS:.c=.o)
