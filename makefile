@@ -1,5 +1,4 @@
-SYSROOT ?= /usr
-CFLAGS += -I./include -I$(SYSROOT)/include -Wall -Wextra
+CFLAGS += -I./include -I$(SYSROOT)/usr/include -Wall -Wextra
 LDFLAGS += -lm
 
 SRCS=$(wildcard *.c)
@@ -25,6 +24,6 @@ clean:
 install:
 	@echo "installing..."
 	@echo ""
-	mkdir -p $(SYSROOT)/lib
-	install -m 644 -p libcomplex.so libcomplex.a $(SYSROOT)/lib
-	install -m 644 -p include/complex.h $(SYSROOT)/include
+	mkdir -p $(SYSROOT)/usr/lib
+	install -m 644 -p libcomplex.so libcomplex.a $(SYSROOT)/usr/lib
+	install -m 644 -p include/complex.h $(SYSROOT)/usr/include
