@@ -1,0 +1,18 @@
+build: false
+version: '{build}'
+
+branches:
+    only:
+        - win
+
+install:
+    - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"
+    - mkdir build
+    - cd build
+    - cmake -G "Visual Studio 14 2015 Win64" ..
+    - cmake --build . --config Release
+
+test_script:
+    - cd tests
+    - set CTEST_OUTPUT_ON_FAILURE=1
+    - ctest -C Release
